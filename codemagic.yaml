@@ -9,15 +9,16 @@ workflows:
         - keystore_reference
       vars:
         PACKAGE_NAME: "com.aistudio.calculator.c3k9p2"
-      sdk_engine: stable
       java: 17
     scripts:
-      - name: Make gradlew executable
-        script: |
-          chmod +x gradlew
       - name: Build Android Debug APK
         script: |
-          ./gradlew assembleDebug --stacktrace
+          if [ -f "./gradlew" ]; then
+            chmod +x gradlew
+            ./gradlew assembleDebug --stacktrace
+          else
+            gradle assembleDebug --stacktrace
+          fi
     artifacts:
       - app/build/outputs/apk/debug/*.apk
       - app/build/outputs/apk/release/*.apk
