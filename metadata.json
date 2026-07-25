@@ -1,0 +1,6 @@
+{
+  "name": "Calculator",
+  "description": "একটি সহজ ও আধুনিক ক্যালকুলেটর অ্যাপ যা যোগ, বিয়োগ, গুণ, ভাগ ও শতাংশ গাণিতিক কাজ দ্রুত সম্পন্ন করতে সাহায্য করে। Codemagic CI-এর জন্য সম্পূর্ণ প্রস্তুত।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
